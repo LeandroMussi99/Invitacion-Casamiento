@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivi y Leo</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importar Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Importar Font Awesome (Opcional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>
+            <img src="img/Logo.png" class="logo-img">
+        </h1>
+
+        <div id="countdown">
+            
+            <div id="timer">
+                <span id="days"></span>Dias
+                <span id="hours"></span>Horas
+                <span id="minutes"></span>Minutos
+                <span id="seconds"></span>Segundos
+            </div>
+        </div>
+        
+        <div class="linea"></div>
+
+        <div class="invitacion">
+            <h2>Invitación para:</h2>
+            <p id="nombre-invitado">Nombre del invitado</p>
+        </div>
+
+        <div class="linea"></div>
+        
+        <div class="ring">
+            <img src="img/rigns1.png" class="fade-swing">
+        </div>
+        
+        <div class="frase">
+            <h2>Nuestra Boda</h2>
+            <p>
+                Con la bendición de Dios<br>
+                <strong>¡Nos Casamos!</strong><br>
+                y nos encantaría compartir<br>
+                este día con ustedes
+            </p>
+        </div>
+    
+        <!-- Foto principal -->
+        <div class="foto-principal">
+            <img src="img/fotoPrincipal4.png" alt="Foto Principal" class="foto-principal-img">
+        </div>
+
+        <div class="frase">
+            <p>
+                Los esperamos el viernes 7 de febrero de 2025 en la iglesia a las 20:00 hs para celebrar nuestra union, 
+                y el sabado 8 de febrero en la quinta a las 20:00 hs para una noche llena de alegria y amor.
+            </p>
+        </div>
+
+        <div class="ubicacion"> 
+            <img src="img/ubicacion.png">
+        </div>
+
+        <div class="frase">
+            <h2>Ubicación</h2>
+        </div>
+        
+        <div class="ubicaciones">
+            <!-- Tarjeta de la Iglesia -->
+            <div class="ubicacion-card">
+                <div class="ubicacion-inner">
+                    <div class="ubicacion-front">
+                        <img src="img/iglesia.png" alt="Iglesia">
+                    </div>
+                    <div class="ubicacion-back">
+                        <p>Iglesia Encuentro Canning</p>
+                        <p>Hipocrates 3320, Canning </p>
+                        <a href="https://www.google.com/maps/place/Iglesia+Encuentro+Canning/@-34.8834516,-58.5120695,17z/data=!4m6!3m5!1s0x95bcd76848809fd5:0xa4dcb81c015f76f2!8m2!3d-34.8837431!4d-58.5118522!16s%2Fg%2F11jz6tncjs?entry=ttu&g_ep=EgoyMDI1MDEwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-maps">Ver en Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Tarjeta del Salón -->
+            <div class="ubicacion-card">
+                <div class="ubicacion-inner">
+                    <div class="ubicacion-front">
+                        <img src="img/salon.png" alt="Salón de Fiesta">
+                    </div>
+                    <div class="ubicacion-back">
+                        <p>Talcahuano 2135 y Colectora <br> Paso del Rey </p>
+                        <a href="https://www.google.com/maps/place/CRC,+Talcahuano+2135,+B1742+Paso+del+Rey,+Provincia+de+Buenos+Aires/@-34.6325463,-58.7578243,15z/data=!4m16!1m9!3m8!1s0x95bc9596537d14d7:0x22a54f78d70693bf!2sCRC,+Talcahuano+2135,+B1742+Paso+del+Rey,+Provincia+de+Buenos+Aires!3b1!8m2!3d-34.6324297!4d-58.757731!10e5!16s%2Fg%2F11c2122g81!3m5!1s0x95bc9596537d14d7:0x22a54f78d70693bf!8m2!3d-34.6324297!4d-58.757731!16s%2Fg%2F11c2122g81?entry=ttu&g_ep=EgoyMDI1MDEwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-maps">Ver en Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <audio id="background-music" autoplay loop>
+            <source src="musica/fondo.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+        
+        <button id="music-control">
+            <img src="img/musica.png" class="music-control">
+        </button>
+        
+        <h2 class="palabra">
+            Y TODO LO HIZO HERMOSO A SU TIEMPO <br> Eclesiastes 3:11
+        </h2>
+
+    </div>
+
+    
+
+    <div>
+        <footer class="footer-copyright">
+            © 2024 Leandro Mussi
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

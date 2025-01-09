@@ -1,0 +1,493 @@
+/* Importar Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap');
+
+/* Reset de Margen y Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(100deg, #e5e8e8 0%, #f5cba7 100%);
+    color: #333;
+}
+
+/* Contenedor Principal */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* Títulos */
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+    font-size: 4em;
+    
+}
+
+h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-family: "Merriweather", serif;
+    text-shadow: 2px 2px 4px #000;
+}
+
+
+.palabra {
+    font-family: "Merriweather", serif;
+    color: #e5e8e8;
+    font-size: 1.5em;
+}
+
+.logo-img {
+    max-width: 100%; /* Asegura que la imagen no desborde su contenedor */
+    height: auto; /* Mantén la proporción de la imagen */
+    display: block; /* Elimina el espacio extra que las imágenes suelen generar */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    padding: 10px; /* Ajusta el padding si es necesario */
+}
+
+
+/* Contenedor de la invitación */
+.invitacion {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* Parrafo */
+.invitacion p#nombre-invitado {
+    font-size: 2em;
+    color: #333;
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+/* Línea verde */
+.linea {
+    height: 2px;
+    background-color: #45625d;
+    width: 100%; 
+    margin: 0 auto;
+    display: block;
+}
+
+
+/* Nombre del invitado */
+#nombre-invitado {
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Temporizador */
+#countdown {
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 60px;
+    font-family: 'Pacifico', cursive;
+    color: #333;
+}
+
+#timer {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+#timer span {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+    
+}
+
+/* Logo anillos */
+.ring {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 200px; /* Ajusta el tamaño según tu imagen */
+}
+
+.fade-swing {
+    opacity: 0; /* Comienza invisible */
+    animation: fadeIn 2s forwards, swing 2s infinite ease-in-out 2s; /* Combinación de animaciones */
+}
+
+/* Animación de aparición gradual */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8); /* Pequeño zoom inicial */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Vuelve al tamaño normal */
+    }
+}
+
+/* Animación de oscilación */
+@keyframes swing {
+    0% {
+        transform: rotate(-10deg); /* Oscilación inicial hacia la izquierda */
+    }
+    50% {
+        transform: rotate(10deg); /* Oscilación hacia la derecha */
+    }
+    100% {
+        transform: rotate(-10deg); /* Regresa al punto inicial */
+    }
+}
+
+
+.frase p {
+    font-size: 1.5em;
+    color: #333;
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.frase h2{
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    font-family: "Merriweather", serif;
+    text-shadow: 4px 4px 6px #000;
+}
+
+
+.foto-principal-img {
+    width: 100%; /* Ajusta al 100% del contenedor */
+    max-width: 600px; /* Limita el tamaño máximo */
+    display: block;
+    margin: 0 auto; /* Centra la imagen */
+    margin-top: 80px;
+    padding-bottom: 40px;
+    border-radius: 60px;
+}
+
+/*Icono*/
+.ubicacion {
+
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 200px;
+    animation: fadeIn 2s forwards, bounce 2s infinite ease-in-out 2s;
+    
+}
+
+/* UBICACIONES */
+
+.ubicaciones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.ubicacion-card {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 5 / 6; /* Relación ancho/alto */
+    height: auto; /* Para asegurar compatibilidad */
+    min-height: 200px; /* Altura mínima para evitar desaparición */
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    margin: 0 auto; /* Asegura que esté centrado dentro de su contenedor */
+    overflow: hidden; /* Oculta el contenido que se salga */
+    position: relative; /* Para manipular la posición del contenido */
+}
+
+
+.ubicacion-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.ubicacion-card:hover .ubicacion-inner {
+    transform: rotateY(180deg); /* Gira la tarjeta */
+}
+
+.ubicacion-front, .ubicacion-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.ubicacion-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    display: block;
+}
+
+.ubicacion-back {
+    background: linear-gradient(150deg, #e5e8e8 0%, #e59866 100%);
+    color: #000;
+    transform: rotateY(180deg); /* Cara trasera */
+    padding: 20px;
+    text-align: center;
+    font-family: "Merriweather", serif;
+    display: flex; /* Asegura que el contenido se centre */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+}
+
+.btn-maps {
+    margin-top: 10px;
+    margin: 0 5px;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn-maps:hover {
+    background: #0056b3;
+}
+
+
+.footer-copyright {
+    text-align: center;
+    font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.4); 
+    bottom: 5px;
+    width: 100%;
+    z-index: 100;
+    pointer-events: none; 
+    font-family: 'Roboto', sans-serif; 
+}
+
+/* Posicionamiento del botón */
+#music-control {
+    position: fixed;
+    left: 10px; /* Posición fija en la izquierda */
+    top: 50%; /* Centrando verticalmente */
+    transform: translateY(-50%); /* Ajuste para centrar exactamente */
+    z-index: 9999;
+    width: 60px; /* Tamaño del botón */
+    height: 60px;
+    background-color: #e59866; /* Color llamativo */
+    border: none;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(5px); /* Efecto de fondo suave */
+    transition: background-color 0.3s, left 0.3s; /* Suaviza la transición en pantallas pequeñas */
+    animation: fadeIn 2s;
+}
+
+/* Efecto hover */
+#music-control:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Más visible al pasar el mouse */
+}
+
+/* Ícono del botón (pausa/play) */
+#music-control i {
+    font-size: 24px; /* Tamaño del ícono */
+    animation: latidos 2.5s infinite ease-in-out 2s;
+}
+
+#music-control img {
+    font-size: 24px; /* Tamaño del ícono */
+    animation: latidos 2.5s infinite ease-in-out 2s;
+    justify-content: center;
+}
+
+
+/* Animaciones */
+
+@keyframes latidos {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Crece ligeramente */
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Crece ligeramente */
+    }
+}
+
+@keyframes colorGlow {
+    0% {
+        color: #ff7eb3;
+    }
+    50% {
+        color: #ffb347;
+    }
+    100% {
+        color: #ff7eb3;
+    }
+}
+
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+/* Responsividad: Ajustes generales para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .invitacion p#nombre-invitado {
+        font-size: 1.5em;
+    }
+
+    #timer {
+        font-size: 1.5em;
+    }
+
+    #timer span {
+        padding: 3px 5px;
+        font-size: 0.9em;
+    }
+
+    .foto-principal-img {
+        max-width: 100%;
+        border-radius: 30px;
+    }
+
+    .ubicaciones {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .ubicacion-card {
+        width: 90%; /* Ajusta al ancho de pantalla */
+        aspect-ratio: 5 / 6; /* Mantén proporción */
+    }
+
+    .ubicacion-inner {
+        height: auto;
+    }
+
+    .btn-maps {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    #music-control {
+        left: 0; /* Pegado al borde izquierdo */
+        border-radius: 0 50% 50% 0; /* Bordes redondeados solo en la derecha */
+    }
+}
+
+/* Responsividad: Ajustes específicos para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    #timer {
+        font-size: 1.2em;
+    }
+
+    #timer span {
+        padding: 2px 4px;
+        font-size: 0.8em;
+    }
+
+    .foto-principal-img {
+        border-radius: 15px;
+    }
+
+    .ubicacion-back {
+        font-size: 0.8em;
+        padding: 15px;
+    }
+
+
+    .ubicacion-card {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        /* Relación más alta para móviles */
+    }
+
+    .ubicacion-front img {
+        height: auto;
+    }
+
+
+
+    .btn-maps {
+        padding: 6px 10px;
+        font-size: 0.8em;
+    }
+}
