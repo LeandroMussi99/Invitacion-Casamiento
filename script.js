@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function updateLabels() {
-        const isSmallScreen = window.innerWidth <= 480;
+        const isSmallScreen = window.innerWidth <= 400;
         const labelsToUse = isSmallScreen ? labels.short : labels.full;
 
         document.querySelector('#days').nextSibling.textContent = labelsToUse.days;
