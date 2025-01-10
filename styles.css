@@ -14,6 +14,11 @@ body {
     color: #333;
 }
 
+:root {
+    color-scheme: light; /* Indica al navegador usar el esquema claro */
+}
+
+
 /* Contenedor Principal */
 .container {
     max-width: 1000px;
@@ -41,6 +46,13 @@ h2 {
     text-shadow: 2px 2px 4px #000;
 }
 
+.palabra-principal {
+    font-family: "Merriweather", serif;
+    color: #e5e8e8;
+    font-size: 1.5em;
+    margin-top: 40px;
+    padding-bottom: 40px;
+}
 
 .palabra {
     font-family: "Merriweather", serif;
@@ -53,7 +65,6 @@ h2 {
     height: auto; /* Mantén la proporción de la imagen */
     display: block; /* Elimina el espacio extra que las imágenes suelen generar */
     margin: 0 auto; /* Centra la imagen horizontalmente */
-    padding: 10px; /* Ajusta el padding si es necesario */
 }
 
 
@@ -84,7 +95,7 @@ h2 {
 /* Línea verde */
 .linea {
     height: 2px;
-    background-color: #45625d;
+    background-color: #e59866;
     width: 100%; 
     margin: 0 auto;
     display: block;
@@ -102,7 +113,7 @@ h2 {
 #countdown {
     text-align: center;
     margin-top: 20px;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
     font-family: 'Pacifico', cursive;
     color: #333;
 }

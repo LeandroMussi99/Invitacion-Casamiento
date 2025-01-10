@@ -1,6 +1,11 @@
 // script.js
+// Manejo Contador 
 document.addEventListener('DOMContentLoaded', function () {
     const weddingDate = new Date('2025-02-07T20:00:00'); 
+    const labels = {
+        full: { days: "Días", hours: "Horas", minutes: "Minutos", seconds: "Segundos" },
+        short: { days: "Días", hours: "Hrs", minutes: "Min", seconds: "Seg" }
+    };
 
     function updateCountdown() {
         const now = new Date();
@@ -16,14 +21,31 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('hours').textContent = hours;
             document.getElementById('minutes').textContent = minutes;
             document.getElementById('seconds').textContent = seconds;
+
+            updateLabels(); // Asegurar que las etiquetas son correctas
         } else {
             document.getElementById('timer').textContent = '¡Hoy es el gran día!';
         }
     }
 
+    function updateLabels() {
+        const isSmallScreen = window.innerWidth <= 480;
+        const labelsToUse = isSmallScreen ? labels.short : labels.full;
+
+        document.querySelector('#days').nextSibling.textContent = labelsToUse.days;
+        document.querySelector('#hours').nextSibling.textContent = labelsToUse.hours;
+        document.querySelector('#minutes').nextSibling.textContent = labelsToUse.minutes;
+        document.querySelector('#seconds').nextSibling.textContent = labelsToUse.seconds;
+    }
+
+    // Ejecutar al cargar y en cada intervalo
     setInterval(updateCountdown, 1000);
-    updateCountdown(); // Llamar inmediatamente para mostrar al cargar
+    updateCountdown();
+
+    // Actualizar etiquetas al cambiar tamaño de pantalla
+    window.addEventListener('resize', updateLabels);
 });
+
 
 
 
