@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
       warningBanner.innerHTML = `
         Es posible que su navegador (Samsung Internet) no muestre este sitio web correctamente.
         Recomendamos utilizar Firefox, Microsoft Edge o Google Chrome.
-        <button style="margin-left: 10px; padding: 5px;" onclick="this.parentNode.remove()">Close</button>
+        <button style="margin-left: 10px; padding: 5px;" onclick="this.parentNode.remove()">Cerrar</button>
       `;
       document.body.appendChild(warningBanner);
     });
