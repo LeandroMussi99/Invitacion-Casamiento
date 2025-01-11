@@ -93,4 +93,30 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+ 
+  if (navigator.userAgent.match(/samsung/i)) {
+    document.addEventListener("DOMContentLoaded", function() {
+      const warningBanner = document.createElement("div");
+      warningBanner.style.cssText = `
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #ffcc00;
+        color: black;
+        text-align: center;
+        padding: 10px;
+        z-index: 9999;
+        font-size: 16px;
+      `;
+      warningBanner.innerHTML = `
+        Es posible que su navegador (Samsung Internet) no muestre este sitio web correctamente.
+        Recomendamos utilizar Firefox, Microsoft Edge o Google Chrome.
+        <button style="margin-left: 10px; padding: 5px;" onclick="this.parentNode.remove()">Close</button>
+      `;
+      document.body.appendChild(warningBanner);
+    });
+  }
+
+
+
 
