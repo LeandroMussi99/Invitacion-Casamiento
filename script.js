@@ -117,6 +117,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+// Detectar los parámetros de la URL
+const params = new URLSearchParams(window.location.search);
+const soloCeremonia = params.get("onlyCer");
 
+// Si el parámetro "soloCeremonia" existe, ocultamos la información de la quinta
+if (soloCeremonia) {
+    // Cambiar el texto de la invitación
+    document.getElementById("descripcion-invitacion").textContent =
+        "Los esperamos el viernes 7 de febrero de 2025 en la iglesia a las 19:30 hs para celebrar nuestra unión.";
+    
+    // Ocultar la tarjeta de la quinta
+    const ubicacionTarjetas = document.getElementById("ubicacion-tarjetas");
+    if (ubicacionTarjetas) {
+        ubicacionTarjetas.style.display = "none";
+    }
+}
 
 
