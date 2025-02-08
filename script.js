@@ -1,5 +1,6 @@
 // script.js
 // Manejo Contador 
+// Manejo Contador 
 document.addEventListener('DOMContentLoaded', function () {
     const weddingDate = new Date('2025-02-07T20:00:00'); 
     const labels = {
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const timeLeft = weddingDate - now;
 
         if (timeLeft > 0) {
+            // Cuenta regresiva hasta la boda
             const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
             const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
@@ -22,10 +24,26 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('minutes').textContent = minutes;
             document.getElementById('seconds').textContent = seconds;
 
-            updateLabels(); // Asegurar que las etiquetas son correctas
+            document.getElementById('contador-texto').textContent = "Faltan:";
+
         } else {
-            document.getElementById('timer').textContent = '¡Hoy es el gran día!';
+            // Desde la boda, contar cuánto llevan casados
+            const timeSinceWedding = now - weddingDate;
+
+            const days = Math.floor(timeSinceWedding / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeSinceWedding % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeSinceWedding % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeSinceWedding % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+
+            document.getElementById('contador-texto').textContent = "Llevan casados:";
         }
+
+        updateLabels(); // Asegurar que las etiquetas son correctas
     }
 
     function updateLabels() {
