@@ -2,7 +2,7 @@
 // Manejo Contador 
 // Manejo Contador 
 document.addEventListener('DOMContentLoaded', function () {
-    const weddingDate = new Date('2025-02-07T20:00:00'); 
+    const weddingDate = new Date('2025-07-07T20:00:00'); 
     const labels = {
         full: { days: "Días", hours: "Horas", minutes: "Minutos", seconds: "Segundos" },
         short: { days: "Días", hours: "Hrs", minutes: "Min", seconds: "Seg" }
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
- 
+ /*
   if (navigator.userAgent.match(/samsung/i)) {
     document.addEventListener("DOMContentLoaded", function() {
       const warningBanner = document.createElement("div");
@@ -133,7 +133,16 @@ document.addEventListener("DOMContentLoaded", function () {
       `;
       document.body.appendChild(warningBanner);
     });
-  }
+  }*/
+
+    if (navigator.userAgent.match(/samsung/i)) {
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.style.background = "linear-gradient(100deg, #e5e8e8 0%, #f5cba7 100%)";
+            document.body.style.color = "#333";
+        });
+    }
+    
+
 
 // Detectar los parámetros de la URL
 const params = new URLSearchParams(window.location.search);

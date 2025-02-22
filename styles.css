@@ -50,7 +50,7 @@ h2 {
 
 .palabra-principal {
     font-family: "Merriweather", serif;
-    color: #e5e8e8;
+    color: #fff;
     font-size: 1.5em;
     margin-top: 40px;
     padding-bottom: 40px;
@@ -58,7 +58,7 @@ h2 {
 
 .palabra {
     font-family: "Merriweather", serif;
-    color: #e5e8e8;
+    color: #fff;
     font-size: 1.5em;
 }
 
@@ -524,3 +524,11 @@ h2 {
         font-size: 0.8em;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(100deg, #e5e8e8 0%, #f5cba7 100%) !important;
+        color: #333 !important;
+    }
+}
+
